@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWAT Elite Security | Professional Protection Services</title>
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e94560;
+            --light: #f1f1f1;
+            --dark: #0f0f1b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            width: 150px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--light);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #d13354;
+            transform: translateY(-3px);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: var(--accent);
+            margin: 15px auto;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .service-card {
+            background: var(--secondary);
+            padding: 30px;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .about {
+            background: url('https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            position: relative;
+            color: var(--light);
+        }
+        
+        .about:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 20, 0.85);
+        }
+        
+        .about-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .team {
+            background: var(--primary);
+        }
+        
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .member {
+            background: var(--secondary);
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .member img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .testimonials {
+            background: var(--secondary);
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .testimonial {
+            padding: 30px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .client-name {
+            font-weight: bold;
+            color: var(--accent);
+        }
+        
+        footer {
+            background: var(--dark);
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            color: var(--light);
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="swat-logo.png" alt="SWAT Elite Security Logo" class="logo">
+        <h1>SWAT Elite Security</h1>
+        <p class="tagline">Professional protection services for high-profile individuals, VIP events, and premium venues. Our elite team ensures your safety with military precision and discretion.</p>
+        <a href="#contact" class="btn">Request Security Services</a>
+    </header>
+    
+    <section id="services" class="container">
+        <h2>Our Elite Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h3>Executive Protection</h3>
+                <p>Highly trained bodyguards providing 24/7 protection for executives, celebrities, and high-net-worth individuals. Discreet yet effective security tailored to your needs.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-door-closed"></i>
+                </div>
+                <h3>Premium Bouncer Services</h3>
+                <p>Our elite door staff maintain order at high-end clubs, bars, and venues. Trained in conflict resolution and physical intervention techniques.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-calendar-star"></i>
+                </div>
+                <h3>Event Security Management</h3>
+                <p>Complete security solutions for corporate events, weddings, concerts, and VIP gatherings. From risk assessment to crowd control, we handle it all.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-building-shield"></i>
+                </div>
+                <h3>Residential Security</h3>
+                <p>Protection for luxury residences and gated communities. Armed or unarmed guards, surveillance systems, and perimeter security.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-car-burst"></i>
+                </div>
+                <h3>Armored Transportation</h3>
+                <p>Secure transportation for valuable assets, cash-in-transit, and high-profile individuals in armored vehicles with trained escorts.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3>Surveillance & Risk Assessment</h3>
+                <p>Advanced threat assessment and surveillance services to identify and mitigate potential security risks before they occur.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Why Choose SWAT Elite</h2>
+                <p>SWAT Elite Security isn't just another security company - we're a team of former special forces, law enforcement, and elite protection specialists who bring military-grade expertise to civilian security needs.</p>
+                
+                <p>Our operatives undergo rigorous training in defensive tactics, emergency response, surveillance detection, and executive protection protocols. We combine physical presence with strategic thinking to provide seamless security that doesn't compromise your lifestyle or event atmosphere.</p>
+                
+                <p>When you hire SWAT Elite, you're not just getting a security guard - you're getting a highly trained professional who can assess threats, de-escalate situations, and respond decisively when needed.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="team" class="team">
+        <div class="container">
+            <h2>Our Elite Team</h2>
+            <div class="team-members">
+                <div class="member">
+                    <img src="https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Team Member">
+                    <h3>Marcus Johnson</h3>
+                    <p>Head of Security</p>
+                    <p>Former Navy SEAL with 15 years of protection experience</p>
+                </div>
+                
+                <div class="member">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Team Member">
+                    <h3>Joseph Kapolon</h3>
+                    <p>Executive Protection Specialist</p>
+                    <p>10 years in diplomatic security services</p>
+                </div>
+                
+                <div class="member">
+                    <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Team Member">
+                    <h3>John Kapolon</h3>
+                    <p>Event Security Manager</p>
+                    <p>Specializes in high-profile event security planning</p>
+                </div>
+                
+                <div class="member">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Team Member">
+                    <h3>Daniel Opati</h3>
+                    <p>Close Protection Officer</p>
+                    <p>Former Army Ranger with extensive combat training</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Client Testimonials</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p class="testimonial-text">"SWAT Elite provided security for our high-profile wedding with 300 guests. Their team was professional, discreet, and handled everything seamlessly. We felt completely safe throughout the event."</p>
+                    <p class="client-name">- Jennifer L., Event Client</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"As a CEO who frequently travels to high-risk areas, I trust SWAT Elite with my personal security. Their executive protection team is second to none - highly trained and always two steps ahead."</p>
+                    <p class="client-name">- Robert K.,</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"Our nightclub had constant issues until we hired SWAT's bouncer team. They transformed our venue's atmosphere - maintaining order while keeping the experience enjoyable for our VIP clients."</p>
+                    <p class="client-name">- Michael T., Nightclub Owner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="container">
+        <h2>Request Our Services</h2>
+        <form style="max-width: 600px; margin: 0 auto;">
+            <div style="margin-bottom: 20px;">
+                <label for="name" style="display: block; margin-bottom: 5px;">Name</label>
+                <input type="text" id="name" style="width: 100%; padding: 10px; border-radius: 5px; border: none;">
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="email" style="display: block; margin-bottom: 5px;">Email</label>
+                <input type="email" id="email" style="width: 100%; padding: 10px; border-radius: 5px; border: none;">
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="phone" style="display: block; margin-bottom: 5px;">Phone</label>
+                <input type="tel" id="phone" style="width: 100%; padding: 10px; border-radius: 5px; border: none;">
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="service" style="display: block; margin-bottom: 5px;">Service Needed</label>
+                <select id="service" style="width: 100%; padding: 10px; border-radius: 5px; border: none;">
+                    <option value="">Select a service</option>
+                    <option value="bodyguard">Executive Protection</option>
+                    <option value="bouncer">Bouncer Services</option>
+                    <option value="event">Event Security</option>
+                    <option value="residential">Residential Security</option>
+                    <option value="transport">Armored Transportation</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="message" style="display: block; margin-bottom: 5px;">Details</label>
+                <textarea id="message" rows="5" style="width: 100%; padding: 10px; border-radius: 5px; border: none;"></textarea>
+            </div>
+            
+            <button type="submit" class="btn" style="width: 100%;">Request Security Consultation</button>
+        </form>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <img src="swat-logo.png" alt="SWAT Elite Security Logo" class="logo" style="margin-bottom: 20px;">
+            
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> 24/7 Dispatch: 1-800-SWAT-911</p>
+                <p><i class="fas fa-envelope"></i> contact@swatelitesecurity.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Headquarters: 123 Security Plaza, Suite 500, New York, NY 10001</p>
+            </div>
+            
+            <div class="social-links" style="margin: 20px 0;">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            
+            <p>&copy; 2023 SWAT Elite Security. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px;">Licensed, Bonded, and Insured. All operatives undergo rigorous background checks and continuous training.</p>
+        </div>
+    </footer>
+</body>
+</html>

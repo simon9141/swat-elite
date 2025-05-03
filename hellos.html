@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!--  -->
+    <!-- AKfycbwOk9hwRu1zr0jRdGiFf9K-vMKj2kisFX0gsE8UDTuU_OHMFZxftXT12XdcK7Pg2si7 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SWAT Elite Security | Professional Protection Services</title>
     <style>
         :root {
-            --primary: #1a1a2e;
-            --secondary: #16213e;
-            --accent: #e94560;
-            --light: #f1f1f1;
-            --dark: #0f0f1b;
+            --primary: #0a192f;  /* Dark navy blue */
+            --secondary: #172a45;  /* Slightly lighter navy */
+            --accent: #ff7e5f;  /* Vibrant coral */
+            --light: #f8f9fa;
+            --dark: #0a0a0a;
+            --highlight: #64ffda;  /* Teal highlight */
         }
         
         * {
@@ -21,83 +25,157 @@
         }
         
         body {
-            background-color: var(--dark);
-            color: var(--light);
+            background-color: var(--light);
+            color: var(--dark);
             line-height: 1.6;
         }
         
         header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            /* background-image: url('47.jpg'); */
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 20px;
+            padding: 20px;
+            color: var(--light);
         }
         
+        .hero-banner {
+            background-image: url('47.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 3rem 1rem;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            position: relative;
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 0;
+        }
+
+        .hero-banner > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo img {
+            max-width: 150px;
+            background-color: rgba(255,255,255,0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #c0392b;
+        }
         .logo {
             width: 150px;
+            height: 150px;
             margin-bottom: 30px;
+            background-color: var(--accent);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
         }
         
         h1 {
-            font-size: 3.5rem;
+            font-size: clamp(2rem, 6vw, 3.5rem);
             margin-bottom: 20px;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .tagline {
-            font-size: 1.5rem;
+            font-size: clamp(1rem, 3vw, 1.5rem);
             margin-bottom: 30px;
             max-width: 800px;
+            color: rgba(255,255,255,0.9);
         }
         
         .btn {
             display: inline-block;
             background: var(--accent);
-            color: var(--light);
-            padding: 15px 30px;
+            color: white;
+            padding: 12px 30px;
             border: none;
-            border-radius: 5px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.3s ease;
+            font-size: clamp(0.9rem, 3vw, 1rem);
+            box-shadow: 0 4px 15px rgba(255,126,95,0.4);
         }
         
         .btn:hover {
-            background: #d13354;
+            background: #ff6b4d;
             transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255,126,95,0.6);
         }
         
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
         
         section {
-            padding: 80px 0;
+            padding: 60px 0;
         }
         
         h2 {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 40px;
             text-transform: uppercase;
             position: relative;
+            color: var(--primary);
         }
         
         h2:after {
             content: '';
             display: block;
-            width: 100px;
+            width: 80px;
             height: 4px;
             background: var(--accent);
             margin: 15px auto;
@@ -105,51 +183,47 @@
         
         .services {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
         }
         
         .service-card {
-            background: var(--secondary);
+            background: white;
             padding: 30px;
-            border-radius: 5px;
+            border-radius: 10px;
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--accent);
         }
         
         .service-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
         
         .service-icon {
-            font-size: 3rem;
+            font-size: 2.8rem;
             color: var(--accent);
             margin-bottom: 20px;
         }
         
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .service-card p {
+            font-size: 1rem;
+            color: #555;
         }
         
         .about {
-            background: url('https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
             position: relative;
-            color: var(--light);
-        }
-        
-        .about:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(10, 10, 20, 0.85);
         }
         
         .about-content {
@@ -160,146 +234,325 @@
             text-align: center;
         }
         
+        .about-content p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            background: #f5f7fa;
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: 250px;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 20px 15px 15px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        /* Team Section */
         .team {
-            background: var(--primary);
+            background: white;
         }
         
         .team-members {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            margin-top: 50px;
+            margin-top: 40px;
         }
         
         .member {
-            background: var(--secondary);
-            padding: 20px;
-            border-radius: 5px;
+            background: white;
+            padding: 0;
+            border-radius: 10px;
             text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
         
-        .member img {
+        .member-img {
             width: 100%;
             height: 300px;
+            overflow: hidden;
+        }
+        
+        .member-img img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            border-radius: 5px;
-            margin-bottom: 20px;
+            transition: transform 0.5s ease;
+        }
+        
+        .member:hover .member-img img {
+            transform: scale(1.05);
+        }
+        
+        .member-info {
+            padding: 25px 20px;
+        }
+        
+        .member h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        
+        .member p {
+            color: #666;
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+        
+        .member p:last-child {
+            color: #888;
+            font-size: 0.9rem;
         }
         
         .testimonials {
-            background: var(--secondary);
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
         }
         
         .testimonial-slider {
             max-width: 800px;
             margin: 0 auto;
-            text-align: center;
         }
         
         .testimonial {
             padding: 30px;
+            text-align: center;
         }
         
         .testimonial-text {
             font-style: italic;
             margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            position: relative;
+        }
+        
+        .testimonial-text:before,
+        .testimonial-text:after {
+            content: '"';
+            font-size: 2rem;
+            color: var(--highlight);
+            opacity: 0.5;
         }
         
         .client-name {
             font-weight: bold;
-            color: var(--accent);
+            color: var(--highlight);
+            font-size: 1.1rem;
         }
         
         footer {
             background: var(--dark);
+            color: white;
             text-align: center;
-            padding: 30px;
+            padding: 50px 20px;
+        }
+        
+        .footer-logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
         
         .contact-info {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 25px 0;
         }
         
         .social-links a {
-            color: var(--light);
-            margin: 0 10px;
+            color: white;
             font-size: 1.5rem;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.1);
         }
         
         .social-links a:hover {
             color: var(--accent);
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 20px;
         }
         
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
+            .container {
+                padding: 40px 15px;
             }
             
-            .tagline {
-                font-size: 1.2rem;
+            section {
+                padding: 40px 0;
+            }
+            
+            .gallery-container,
+            .team-members {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .member-img {
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .services {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-container,
+            .team-members {
+                grid-template-columns: 1fr;
+            }
+            
+            .member-img {
+                height: 300px;
             }
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("service_52mpbwu"); // Initialize with your EmailJS user ID
+        })();
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <img src="swat-logo.png" alt="SWAT Elite Security Logo" class="logo">
+    <header class="hero-banner">
+        <div class="logo">
+            <img src="logo.jpg" alt="SWAT Elite Security Logo">
+        </div>
         <h1>SWAT Elite Security</h1>
-        <p class="tagline">Professional protection services for high-profile individuals, VIP events, and premium venues. Our elite team ensures your safety with military precision and discretion.</p>
+        <p class="tagline">Professional protection services for individuals, businesses, and events. Our highly trained security professionals ensure your safety with expertise and discretion.</p>
         <a href="#contact" class="btn">Request Security Services</a>
     </header>
     
     <section id="services" class="container">
-        <h2>Our Elite Services</h2>
+        <h2>Our Professional Services</h2>
         <div class="services">
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-user-shield"></i>
                 </div>
-                <h3>Executive Protection</h3>
-                <p>Highly trained bodyguards providing 24/7 protection for executives, celebrities, and high-net-worth individuals. Discreet yet effective security tailored to your needs.</p>
+                <h3>Personal Protection</h3>
+                <p>Highly trained security personnel providing protection for individuals and families. Discreet yet effective security tailored to your needs.</p>
             </div>
             
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-door-closed"></i>
                 </div>
-                <h3>Premium Bouncer Services</h3>
-                <p>Our elite door staff maintain order at high-end clubs, bars, and venues. Trained in conflict resolution and physical intervention techniques.</p>
+                <h3>Venue Security</h3>
+                <p>Our professional security staff maintain order at clubs, bars, and venues. Trained in conflict resolution and customer service.</p>
             </div>
             
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-calendar-star"></i>
                 </div>
-                <h3>Event Security Management</h3>
-                <p>Complete security solutions for corporate events, weddings, concerts, and VIP gatherings. From risk assessment to crowd control, we handle it all.</p>
+                <h3>Event Security</h3>
+                <p>Complete security solutions for corporate events, weddings, and gatherings. From planning to execution, we handle it all.</p>
             </div>
             
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-building-shield"></i>
                 </div>
-                <h3>Residential Security</h3>
-                <p>Protection for luxury residences and gated communities. Armed or unarmed guards, surveillance systems, and perimeter security.</p>
+                <h3>Property Security</h3>
+                <p>Protection for residences and commercial properties. Security personnel and surveillance solutions tailored to your property.</p>
             </div>
             
             <div class="service-card">
                 <div class="service-icon">
-                    <i class="fas fa-car-burst"></i>
+                    <i class="fas fa-car-alt"></i>
                 </div>
-                <h3>Armored Transportation</h3>
-                <p>Secure transportation for valuable assets, cash-in-transit, and high-profile individuals in armored vehicles with trained escorts.</p>
+                <h3>Secure Transportation</h3>
+                <p>Safe transportation services for individuals and valuable assets with trained security escorts.</p>
             </div>
             
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-video"></i>
                 </div>
-                <h3>Surveillance & Risk Assessment</h3>
-                <p>Advanced threat assessment and surveillance services to identify and mitigate potential security risks before they occur.</p>
+                <h3>Security Consultation</h3>
+                <p>Professional assessment of your security needs and customized solutions for your situation.</p>
             </div>
         </div>
     </section>
@@ -307,46 +560,83 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
-                <h2>Why Choose SWAT Elite</h2>
-                <p>SWAT Elite Security isn't just another security company - we're a team of former special forces, law enforcement, and elite protection specialists who bring military-grade expertise to civilian security needs.</p>
+                <h2 style="color: white;">Why Choose SWAT Elite</h2>
+                <p>SWAT Elite Security is a team of professional security specialists dedicated to providing top-tier protection services. Our personnel undergo rigorous training in security protocols, defensive tactics, and customer service to ensure the highest standards of protection.</p>
                 
-                <p>Our operatives undergo rigorous training in defensive tactics, emergency response, surveillance detection, and executive protection protocols. We combine physical presence with strategic thinking to provide seamless security that doesn't compromise your lifestyle or event atmosphere.</p>
+                <p>We combine physical presence with strategic planning to provide security that's effective without being intrusive. Our team members are selected for their professionalism, judgment, and ability to handle high-pressure situations.</p>
                 
-                <p>When you hire SWAT Elite, you're not just getting a security guard - you're getting a highly trained professional who can assess threats, de-escalate situations, and respond decisively when needed.</p>
+                <p>When you hire SWAT Elite, you're getting security professionals who are trained to assess situations, de-escalate conflicts, and respond appropriately to any security challenge.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Our Work in Action</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="event.jpg" alt="SWAT team at corporate event">
+                    <div class="gallery-caption">Corporate Event Security</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="event1.jpg" alt="Venue protection team">
+                    <div class="gallery-caption">Nightclub Protection</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="event2.jpg" alt="Executive protection detail">
+                    <div class="gallery-caption">Executive Protection</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="executive.jpg" alt="Security team training">
+                    <div class="gallery-caption">Team Training Session</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="swat3.jpg" alt="Security team on duty">
+                    <div class="gallery-caption">Security Detail</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="swat5.jpg" alt="Club security team">
+                    <div class="gallery-caption">Venue Protection</div>
+                </div>
             </div>
         </div>
     </section>
     
     <section id="team" class="team">
         <div class="container">
-            <h2>Our Elite Team</h2>
+            <h2>Our Professional Team</h2>
             <div class="team-members">
                 <div class="member">
-                    <img src="https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Team Member">
-                    <h3>Marcus Johnson</h3>
-                    <p>Head of Security</p>
-                    <p>Former Navy SEAL with 15 years of protection experience</p>
+                    <div class="member-img">
+                        <img src="jose.jpg" alt="Joseph Kapolon">
+                    </div>
+                    <div class="member-info">
+                        <h3>Joseph Kapolon</h3>
+                        <p>Security Director</p>
+                        <p>15 years of security experience</p>
+                    </div>
                 </div>
                 
                 <div class="member">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Team Member">
-                    <h3>Joseph Kapolon</h3>
-                    <p>Executive Protection Specialist</p>
-                    <p>10 years in diplomatic security services</p>
+                    <div class="member-img">
+                        <img src="kapol.jpg" alt="John Ekapolon">
+                    </div>
+                    <div class="member-info">
+                        <h3>John Ekapolon</h3>
+                        <p>Event Security Manager</p>
+                        <p>Large-scale event specialist</p>
+                    </div>
                 </div>
                 
                 <div class="member">
-                    <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Team Member">
-                    <h3>John Kapolon</h3>
-                    <p>Event Security Manager</p>
-                    <p>Specializes in high-profile event security planning</p>
-                </div>
-                
-                <div class="member">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Team Member">
-                    <h3>Daniel Opati</h3>
-                    <p>Close Protection Officer</p>
-                    <p>Former Army Ranger with extensive combat training</p>
+                    <div class="member-img">
+                        <img src="swat1.jpg" alt="Michael Chen">
+                    </div>
+                    <div class="member-info">
+                        <h3>Michael Chen</h3>
+                        <p>Close Protection Officer</p>
+                        <p>Certified protection specialist</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -354,21 +644,11 @@
     
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <h2>Client Testimonials</h2>
+            <h2 style="color: white;">Client Testimonials</h2>
             <div class="testimonial-slider">
                 <div class="testimonial">
-                    <p class="testimonial-text">"SWAT Elite provided security for our high-profile wedding with 300 guests. Their team was professional, discreet, and handled everything seamlessly. We felt completely safe throughout the event."</p>
-                    <p class="client-name">- Jennifer L., Event Client</p>
-                </div>
-                
-                <div class="testimonial">
-                    <p class="testimonial-text">"As a CEO who frequently travels to high-risk areas, I trust SWAT Elite with my personal security. Their executive protection team is second to none - highly trained and always two steps ahead."</p>
-                    <p class="client-name">- Robert K.,</p>
-                </div>
-                
-                <div class="testimonial">
-                    <p class="testimonial-text">"Our nightclub had constant issues until we hired SWAT's bouncer team. They transformed our venue's atmosphere - maintaining order while keeping the experience enjoyable for our VIP clients."</p>
-                    <p class="client-name">- Michael T., Nightclub Owner</p>
+                    <p class="testimonial-text">SWAT Elite provided security for our corporate event with 200 attendees. Their team was professional, attentive, and made all our guests feel safe throughout the evening.</p>
+                    <p class="client-name">- Jennifer L., Corporate Client</p>
                 </div>
             </div>
         </div>
@@ -376,63 +656,116 @@
     
     <section id="contact" class="container">
         <h2>Request Our Services</h2>
-        <form style="max-width: 600px; margin: 0 auto;">
-            <div style="margin-bottom: 20px;">
-                <label for="name" style="display: block; margin-bottom: 5px;">Name</label>
-                <input type="text" id="name" style="width: 100%; padding: 10px; border-radius: 5px; border: none;">
-            </div>
+        <form 
+        action="https://formsubmit.co/simonotieno9141@gmail.com" 
+        method="POST"
+        id="consultationForm"
+        style="max-width: 600px; margin: 0 auto;"
+    >
+        <!-- FormSubmit Configuration -->
+        <input type="hidden" name="_subject" value="New Security Consultation Request">
+        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none"> <!-- Anti-spam honeypot -->
+        
+        <!-- Form Fields -->
+        <div style="margin-bottom: 20px;">
+            <label for="name" style="display: block; margin-bottom: 5px; color: var(--primary); font-weight: bold;">Name</label>
+            <input type="text" id="name" name="name" required style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ddd;">
+        </div>
+        
+        <div style="margin-bottom: 20px;">
+            <label for="email" style="display: block; margin-bottom: 5px; color: var(--primary); font-weight: bold;">Email</label>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ddd;">
+        </div>
+        
+        <div style="margin-bottom: 20px;">
+            <label for="phone" style="display: block; margin-bottom: 5px; color: var(--primary); font-weight: bold;">Phone</label>
+            <input type="tel" id="phone" name="phone" style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ddd;">
+        </div>
+        
+        <div style="margin-bottom: 20px;">
+            <label for="service" style="display: block; margin-bottom: 5px; color: var(--primary); font-weight: bold;">Service Needed</label>
+            <select id="service" name="service" required style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ddd; background: white;">
+                <option value="">Select a service</option>
+                <option value="personal">Personal Protection</option>
+                <option value="venue">Venue Security</option>
+                <option value="event">Event Security</option>
+                <option value="property">Property Security</option>
+                <option value="transport">Secure Transportation</option>
+                <option value="consult">Security Consultation</option>
+            </select>
+        </div>
+        
+        <div style="margin-bottom: 20px;">
+            <label for="message" style="display: block; margin-bottom: 5px; color: var(--primary); font-weight: bold;">Details</label>
+            <textarea id="message" name="message" rows="5" style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ddd;"></textarea>
+        </div>
+        
+        <button type="submit" class="btn" style="width: 100%;">Request Security Consultation</button>
+    </form>
+
+        <!-- <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwHv2Sd7E2RNcpho_D9vBywm5FcoStEGrr0ndLsRbr6tcGU9jMLXaF1Dy7IzX45s67qaw/exec';
+            const form = document.getElementById('consultationForm');
             
-            <div style="margin-bottom: 20px;">
-                <label for="email" style="display: block; margin-bottom: 5px;">Email</label>
-                <input type="email" id="email" style="width: 100%; padding: 10px; border-radius: 5px; border: none;">
-            </div>
-            
-            <div style="margin-bottom: 20px;">
-                <label for="phone" style="display: block; margin-bottom: 5px;">Phone</label>
-                <input type="tel" id="phone" style="width: 100%; padding: 10px; border-radius: 5px; border: none;">
-            </div>
-            
-            <div style="margin-bottom: 20px;">
-                <label for="service" style="display: block; margin-bottom: 5px;">Service Needed</label>
-                <select id="service" style="width: 100%; padding: 10px; border-radius: 5px; border: none;">
-                    <option value="">Select a service</option>
-                    <option value="bodyguard">Executive Protection</option>
-                    <option value="bouncer">Bouncer Services</option>
-                    <option value="event">Event Security</option>
-                    <option value="residential">Residential Security</option>
-                    <option value="transport">Armored Transportation</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            
-            <div style="margin-bottom: 20px;">
-                <label for="message" style="display: block; margin-bottom: 5px;">Details</label>
-                <textarea id="message" rows="5" style="width: 100%; padding: 10px; border-radius: 5px; border: none;"></textarea>
-            </div>
-            
-            <button type="submit" class="btn" style="width: 100%;">Request Security Consultation</button>
-        </form>
+            form.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              
+              try {
+                // First add name attributes to your form fields
+                const formData = {
+                  name: document.getElementById('name').value,
+                  email: document.getElementById('email').value,
+                  phone: document.getElementById('phone').value,
+                  service: document.getElementById('service').value,
+                  message: document.getElementById('message').value
+                };
+                
+                const response = await fetch(scriptURL, {
+                  method: 'POST',
+                  body: JSON.stringify(formData),
+                  headers: {
+                    'Content-Type': 'application/json'
+                  }
+                });
+                
+                if (!response.ok) throw new Error('Network response was not ok');
+                
+                const result = await response.json();
+                alert('Thank you! Your submission was recorded.');
+                form.reset();
+              } catch (error) {
+                console.error('Error:', error);
+                alert('There was a problem with your submission.');
+              }
+            });
+          </script> -->
     </section>
-    
+     
     <footer>
         <div class="container">
-            <img src="swat-logo.png" alt="SWAT Elite Security Logo" class="logo" style="margin-bottom: 20px;">
+            <div class="footer-logo">
+            <div class="logo">
+                <img src="logo.jpg" alt="SWAT Elite Security Logo">
+            </div>
+            </div>
             
             <div class="contact-info">
-                <p><i class="fas fa-phone"></i> 24/7 Dispatch: 1-800-SWAT-911</p>
-                <p><i class="fas fa-envelope"></i> contact@swatelitesecurity.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Headquarters: 123 Security Plaza, Suite 500, New York, NY 10001</p>
+                <p><i class="fas fa-phone"></i> 24/7 Dispatch: 0719115184</p>
+                <!-- <p><i class="fas fa-envelope"></i> contact@swatelitesecurity.com</p> -->
+                <p><i class="fas fa-map-marker-alt"></i> Headquarters: Busia, Kenya</p>
             </div>
             
-            <div class="social-links" style="margin: 20px 0;">
-                <a href="#"><i class="fab fa-facebook"></i></a>
+            <div class="social-links">
+                <a href="https://web.facebook.com/swatelitebouncers/"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
             
-            <p>&copy; 2023 SWAT Elite Security. All rights reserved.</p>
-            <p style="font-size: 0.8rem; margin-top: 10px;">Licensed, Bonded, and Insured. All operatives undergo rigorous background checks and continuous training.</p>
+            <p class="copyright">&copy; 2023 SWAT Elite Security. All rights reserved.<br>
+            Licensed, Bonded, and Insured. All personnel undergo thorough background checks and continuous professional training.</p>
         </div>
     </footer>
 </body>
